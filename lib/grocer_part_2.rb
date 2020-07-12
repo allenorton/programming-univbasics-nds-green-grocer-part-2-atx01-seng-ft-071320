@@ -4,6 +4,7 @@ def apply_coupons(cart, coupons)
   coupons.each do
     coupon_items = find_item_by_name_in_collection(coupon[:item], cart)
     if coupon_items
+      
     end 
   end 
   binding.pry 
