@@ -12,7 +12,7 @@ def apply_coupons(cart, coupons)
               clearance: coupon_items[:clearance],
               count: coupon_hash[:count]
             }
-            coupon_cart.push(applied_coupon)
+           cart.push(applied_coupon)
           end 
       end
     end 
