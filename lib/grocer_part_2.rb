@@ -39,6 +39,9 @@ def checkout(cart, coupons)
   all_discounts.each do |foods|
     total += foods[:price]*foods[:count] 
   end 
+  if total >= 100
+    final_total = (total * 0.9).round(2)
+  end 
   return total 
   #binding.pry 
 end
