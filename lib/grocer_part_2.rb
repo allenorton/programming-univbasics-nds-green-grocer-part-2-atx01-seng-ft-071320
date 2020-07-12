@@ -12,8 +12,8 @@ def apply_coupons(cart, coupons)
             clearance: foods[:clearance],
             count: coupon_hash[:num]
           }
-           foods[:count] -= coupon_hash[:num]
            cart.push(applied_coupon)
+           foods[:count] -= coupon_hash[:num]
           end 
       end
     end 
