@@ -42,6 +42,6 @@ def checkout(cart, coupons)
   if total >= 100
     final_total = (total * 0.9).round(2)
   end 
-  return total 
+  return final_total
   #binding.pry 
 end
