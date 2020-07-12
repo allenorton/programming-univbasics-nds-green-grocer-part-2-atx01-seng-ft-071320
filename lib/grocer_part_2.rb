@@ -1,10 +1,12 @@
 require_relative './part_1_solution.rb'
 
 def apply_coupons(cart, coupons)
-  coupons.each do
-    coupon_items = find_item_by_name_in_collection(coupons[:item], cart)
+  coupons.each do |coupon_hash|
+    coupon_items = find_item_by_name_in_collection(coupon_hash[:item], cart)
     if coupon_items
-      if coupon_items[:count] >=
+      if coupon_items[:count] >= coupon_hash[:num]
+        
+      end 
     end 
   end 
   binding.pry 
