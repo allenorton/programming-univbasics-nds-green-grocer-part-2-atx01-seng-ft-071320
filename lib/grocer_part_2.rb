@@ -14,7 +14,7 @@ def apply_coupons(cart, coupons)
           }
           coupon_cart.push(applied_coupon)
         end 
-        binding.protect_from_forgery
+        binding.pry 
       end 
     end
   end 
