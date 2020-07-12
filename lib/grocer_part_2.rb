@@ -23,10 +23,11 @@ def apply_coupons(cart, coupons)
 end
 
 def apply_clearance(cart)
-  cart.each do |items|
+  cart.map do |items|
     if items[:clearance]
       items[:price] = items[:price] * 0.8
   end 
+  items 
 end
 
 def checkout(cart, coupons)
