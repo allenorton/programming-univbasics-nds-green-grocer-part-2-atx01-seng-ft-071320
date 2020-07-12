@@ -3,19 +3,20 @@ require_relative './part_1_solution.rb'
 def apply_coupons(cart, coupons)
   cart.each do |foods|
     coupon_item = find_item_by_name_in_collection(foods[:item], coupons)
-    coupons.each do |coupon_hash|
-      if coupon_item === true
-        if coupon_item[:count] >= coupon_hash[:num]
-          applied_coupon = {
-            item: "#{coupon_items[:item]} W/COUPON",
-            price: (coupon_hash[:cost] / coupon_hash[:num]),
-            clearance: coupon_items[:clearance],
-            count: coupon_hash[:count]
-          }
-          coupon_cart.push(applied_coupon)
+    if coupon_item === true 
+      coupons.each do |coupon_hash|
+        if coupon_item === true
+          if coupon_item[:count] >= coupon_hash[:num]
+            applied_coupon = {
+              item: "#{coupon_items[:item]} W/COUPON",
+              price: (coupon_hash[:cost] / coupon_hash[:num]),
+              clearance: coupon_items[:clearance],
+              count: coupon_hash[:count]
+            }
+            coupon_cart.push(applied_coupon)
+          end 
         end 
-      end 
-    end
+      end
   end 
   #binding.pry 
   return cart 
