@@ -1,6 +1,7 @@
 require_relative './part_1_solution.rb'
 
 def apply_coupons(cart, coupons)
+  coupon_item = {}
   coupons.each do |coupon_hash|
     coupon_items = find_item_by_name_in_collection(coupon_hash[:item], cart)
     if coupon_items == true
