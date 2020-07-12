@@ -3,7 +3,7 @@ require_relative './part_1_solution.rb'
 def apply_coupons(cart, coupons)
   cart.each do |foods|
     coupon_item = find_item_by_name_in_collection(foods[:item], coupons)
-    item_in_basket !!= coupon_item
+    if coupon_item === true 
       coupons.each do |coupon_hash|
         if coupon_item[:count] >= coupon_hash[:num]
             applied_coupon = {
