@@ -38,6 +38,9 @@ def checkout(cart, coupons)
   all_discounts = apply_clearance(coups_applied)
   all_discounts.each do |foods|
     total += foods[:price]*foods[:count] 
+  end
+  if total > 100
+    total *= 0.9
   end 
   return total 
   #binding.pry 
