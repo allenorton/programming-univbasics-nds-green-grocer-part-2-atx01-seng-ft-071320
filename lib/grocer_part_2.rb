@@ -6,12 +6,12 @@ def apply_coupons(cart, coupons)
     if coupon_item === true 
       coupons.each do |coupon_hash|
         if foods[:item] == coupon_hash[:item] && foods[:count] >= coupon_hash[:num]
-            applied_coupon = {
-              item: "#{coupon_item[:item]} W/COUPON",
-              price: (coupon_hash[:cost] / coupon_hash[:num]),
-              clearance: coupon_item[:clearance],
-              count: coupon_hash[:count]
-            }
+          applied_coupon = {
+            item: "#{coupon_item[:item]} W/COUPON",
+            price: (coupon_hash[:cost] / coupon_hash[:num]),
+            clearance: coupon_item[:clearance],
+            count: coupon_hash[:count]
+          }
            cart.push(applied_coupon)
           end 
       end
