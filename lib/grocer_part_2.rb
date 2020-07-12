@@ -1,7 +1,23 @@
 require_relative './part_1_solution.rb'
 
 def apply_coupons(cart, coupons)
-   
+  cart.each do |grocery| 
+    current_item = find_item_by_name_in_collection(grocery[:item], coupons)
+    if current_item
+      coupons.each do |coupon|
+        if grocery[:item] == coupon[:item] && grocery[:count] >= coupon[:num]
+          cart.push({
+            :item => "#{grocery[:item]} W/COUPON",
+            :price => coupon[:cost]/coupon[:num],
+            :clearance => grocery[:clearance],
+            :count => coupon[:num]
+          })
+          grocery[:count] -= coupon[:num]
+        end
+      end
+    end
+  end
+  return cart 
 end
 
 def apply_clearance(cart)
