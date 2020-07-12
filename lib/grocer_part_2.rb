@@ -14,11 +14,11 @@ def apply_coupons(cart, coupons)
           }
           coupon_cart.push(applied_coupon)
         end 
+        binding.protect_from_forgery
       end 
     end
   end 
   return cart 
-  binding.pry 
 end
 
 def apply_clearance(cart)
