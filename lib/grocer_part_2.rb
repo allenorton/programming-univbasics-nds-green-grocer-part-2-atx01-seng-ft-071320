@@ -4,7 +4,7 @@ def apply_coupons(cart, coupons)
   cart.each do |foods|
     coupon_item = find_item_by_name_in_collection(foods[:item], coupons)
     coupons.each do |coupon_hash|
-      if coupon_item == true
+      if coupon_item === true
         if coupon_items[:count] >= coupon_hash[:num]
           applied_coupon = {
             item: "#{coupon_items[:item]} W/COUPON",
@@ -14,10 +14,10 @@ def apply_coupons(cart, coupons)
           }
           coupon_cart.push(applied_coupon)
         end 
-        binding.pry 
       end 
     end
   end 
+  binding.pry 
   return cart 
 end
 
