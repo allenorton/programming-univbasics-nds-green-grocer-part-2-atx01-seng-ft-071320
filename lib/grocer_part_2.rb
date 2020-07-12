@@ -5,7 +5,9 @@ def apply_coupons(cart, coupons)
     coupon_items = find_item_by_name_in_collection(coupon_hash[:item], cart)
     if coupon_items
       if coupon_items[:count] >= coupon_hash[:num]
-        
+        cart << {
+          
+        }
       end 
     end 
   end 
