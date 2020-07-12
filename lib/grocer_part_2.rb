@@ -6,7 +6,7 @@ def apply_coupons(cart, coupons)
     if coupon_items
       if coupon_items[:count] >= coupon_hash[:num]
         cart << {
-          
+          item => "#{coupon_items[:item} W/COUPON"
         }
       end 
     end 
