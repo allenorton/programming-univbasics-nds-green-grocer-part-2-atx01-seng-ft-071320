@@ -39,5 +39,5 @@ def checkout(cart, coupons)
     total = 0
     total += foods[:price]*foods[:count] 
   end 
-  binding.pry 
+  #binding.pry 
 end
